@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var news = ViewBag.News;
+}
+
+<h2>Index Home</h2>
+
+<style>
+    .box{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    img{
+        width: 300px;
+        height: 200px;
+        margin-right: 10px;
+    }
+
+</style>
+
+<div>
+    @foreach(var oneNews in news)
+    {
+        <div class="box">
+            <img src="@oneNews.PathImage" />
+            <div>
+                <h2>@oneNews.Title</h2>
+                <p>@oneNews.Text</p>
+            </div>
+        </div>
+    }
+</div>
